@@ -41,3 +41,10 @@ jobs:
         wget -q -O "$FILENAME" "$FULL_IMAGE_URL"
         cp "$FILENAME" "bing/today.jpg"
         mv "$FILENAME" "bing/archive/${{ env.YEAR }}/${{ env.MONTH }}/$FILENAME"
+    - name: Push
+      run: |
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+        git add .
+        git commit -m "update"
+        git push
