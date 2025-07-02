@@ -24,7 +24,7 @@ jobs:
       - name: Download image
         run: |
           curl -L "https://api.xecades.xyz/api?img=3&luogu=Smacat&bilibili=%E4%BA%94%E5%91%B3%E6%A6%B4%E8%8E%B2&quote=qwq&email=admin%40wanwusangzhi.top&date=2025-9-1&str=+2025+%E6%9A%91%E5%81%87%E5%BC%80%E5%AD%A6" \
-          --output "xecades/${DATE}.png"
+          --output "xecades/${DATE}.svg"
 
       - name: Commit and push image
         run: |
